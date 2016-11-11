@@ -1,0 +1,16 @@
+<h1> <%= @billboard.name %> </h1>
+<!-- <br /> -->
+
+<p> <%= @billboard.description %> </p>
+<br />
+
+
+
+<div class='nav-style'>
+	<ul>
+		<li> <%= link_to 'Edit', edit_billboard_path(@billboard) %> </li>
+		<li> <%= link_to 'Delete', billboards_path, method: :destroy, data: {confirm: 'Really delete?'} %> </li>
+	</ul>
+</div> 
+
+

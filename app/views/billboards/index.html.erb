@@ -1,0 +1,15 @@
+<h1> Current Billboards </h1>
+
+<% if @billboards.any? %>
+		<% @billboards.each do |billboard| %>
+			<div class='collection'>
+				<%= link_to billboard.name, billboard_path(billboard) %>
+			</div>
+		<% end %>
+<% else %>
+	<h4> Create A Billboard!</h4>
+<% end %>
+
+<div class='collection'>
+	<%= link_to 'Create A Billboard', new_billboard_path %>
+</div>
